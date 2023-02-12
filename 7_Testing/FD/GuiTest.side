@@ -1,0 +1,80 @@
+{
+  "id": "1dd16180-4a1b-4d3b-9769-b1d0818f1a07",
+  "version": "2.0",
+  "name": "GuiTest",
+  "url": "https://it.wikipedia.org/wiki/Stephen_Curry",
+  "tests": [{
+    "id": "2b447352-1f8b-45fc-afee-8d8a235fa28f",
+    "name": "testCurryTeam",
+    "commands": [{
+      "id": "e0d9c274-bd65-4918-a4e6-884e653ce3f6",
+      "comment": "",
+      "command": "open",
+      "target": "https://it.wikipedia.org/wiki/Stephen_Curry",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20528a7a-4180-41fe-ba24-bda965a0ad51",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "447b209d-bfe6-4e3f-be17-6ff8e00e53c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-parser-output",
+      "targets": [
+        ["css=.mw-parser-output", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fb87457-b070-4434-8cb7-aebaace17508",
+      "comment": "",
+      "command": "click",
+      "target": "css=tbody:nth-child(1) > tr:nth-child(9) > td",
+      "targets": [
+        ["css=tbody:nth-child(1) > tr:nth-child(9) > td", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/table/tbody/tr[9]/td", "xpath:idRelative"],
+        ["xpath=//tr[9]/td", "xpath:position"],
+        ["xpath=//td[contains(.,' G.S. Warriors')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54bf73f9-3611-487e-8ab0-5efab586d738",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=G.S. Warriors",
+      "targets": [
+        ["linkText=G.S. Warriors", "linkText"],
+        ["css=tbody:nth-child(1) > tr:nth-child(9) > td > a", "css:finder"],
+        ["xpath=//a[contains(text(),'G.S. Warriors')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/table/tbody/tr[9]/td/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/wiki/Golden_State_Warriors')])[2]", "xpath:href"],
+        ["xpath=//tr[9]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'G.S. Warriors')]", "xpath:innerText"]
+      ],
+      "value": "G.S. Warriors"
+    }, {
+      "id": "12fd3802-7360-491b-afa3-d849fa0ccf42",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "392fcce6-1148-44a2-ab5a-e5293db411d9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2b447352-1f8b-45fc-afee-8d8a235fa28f"]
+  }],
+  "urls": ["https://it.wikipedia.org/", "https://it.wikipedia.org/wiki/Stephen_Curry"],
+  "plugins": []
+}
