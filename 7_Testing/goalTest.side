@@ -1,0 +1,54 @@
+{
+  "id": "2f86d075-0298-449d-b359-242431122c6a",
+  "version": "2.0",
+  "name": "tottiTest2",
+  "url": "https://it.wikipedia.org/wiki/Francesco_Totti",
+  "tests": [{
+    "id": "728144a9-5830-4663-833a-3fe5c7f8f197",
+    "name": "tottigoaltest",
+    "commands": [{
+      "id": "8500d045-f4c3-49d8-a578-2aa94a3bb402",
+      "comment": "",
+      "command": "open",
+      "target": "https://it.wikipedia.org/wiki/Francesco_Totti",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fe100c6-ed2b-4d41-901e-08bd7b306dc9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1054x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3bb26d81-21a6-4932-afe5-35cda843ac7e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(28) > th:nth-child(14)",
+      "targets": [
+        ["css=tr:nth-child(28) > th:nth-child(14)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/table[2]/tbody/tr[28]/th[14]", "xpath:idRelative"],
+        ["xpath=//tr[28]/th[14]", "xpath:position"],
+        ["xpath=//th[contains(.,'307')]", "xpath:innerText"]
+      ],
+      "value": "307"
+    }, {
+      "id": "614097e2-80ef-49ba-8236-39b25f2c00ac",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4c7fd95a-c5cb-4dcd-accb-8ba8023f7a27",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["728144a9-5830-4663-833a-3fe5c7f8f197"]
+  }],
+  "urls": ["https://it.wikipedia.org/wiki/Francesco_Totti"],
+  "plugins": []
+}
